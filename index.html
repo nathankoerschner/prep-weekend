@@ -262,28 +262,29 @@
       color: var(--green);
     }
 
-    /* Testimonials Grid */
+    /* Testimonials Masonry */
     .testimonials-section .container {
       max-width: 1000px;
     }
 
     .testimonials {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
+      column-count: 1;
+      column-gap: 24px;
     }
 
     @media (min-width: 700px) {
       .testimonials {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
+        column-count: 2;
+        column-gap: 30px;
       }
     }
 
     .testimonials img {
       width: 100%;
+      margin-bottom: 24px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      break-inside: avoid;
     }
 
     /* Final CTA Section */
