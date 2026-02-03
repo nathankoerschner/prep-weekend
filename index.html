@@ -142,23 +142,36 @@
     }
 
     /* Benefits */
+    .benefits-wrapper {
+      max-width: 1000px;
+    }
+
     .benefits-section {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 40px;
-      align-items: start;
+      gap: 50px;
+      align-items: center;
     }
 
-    @media (min-width: 800px) {
+    @media (min-width: 850px) {
       .benefits-section {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 60px;
       }
     }
 
     .benefits-testimonial {
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      box-shadow: 0 6px 30px rgba(0,0,0,0.15);
       width: 100%;
+      max-width: 420px;
+      justify-self: center;
+    }
+
+    @media (min-width: 850px) {
+      .benefits-testimonial {
+        max-width: none;
+      }
     }
 
     .benefits {
@@ -392,7 +405,7 @@
   </section>
 
   <section>
-    <div class="container">
+    <div class="container benefits-wrapper">
       <h2>What Your Student Will Get</h2>
       <p>This isn't a lecture series. It's two days of hands-on, personalized SAT preparation designed to meet each student where they are.</p>
       <div class="benefits-section">
