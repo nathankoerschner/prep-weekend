@@ -142,6 +142,25 @@
     }
 
     /* Benefits */
+    .benefits-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (min-width: 800px) {
+      .benefits-section {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .benefits-testimonial {
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      width: 100%;
+    }
+
     .benefits {
       display: flex;
       flex-direction: column;
@@ -376,42 +395,45 @@
     <div class="container">
       <h2>What Your Student Will Get</h2>
       <p>This isn't a lecture series. It's two days of hands-on, personalized SAT preparation designed to meet each student where they are.</p>
-      <div class="benefits">
-        <div class="benefit">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <strong>Full Practice SAT</strong>
-            <p>Take a complete, timed practice test under realistic conditions</p>
+      <div class="benefits-section">
+        <div class="benefits">
+          <div class="benefit">
+            <div class="benefit-icon">&#10003;</div>
+            <div>
+              <strong>Full Practice SAT</strong>
+              <p>Take a complete, timed practice test under realistic conditions</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icon">&#10003;</div>
+            <div>
+              <strong>Immediate Feedback</strong>
+              <p>Get personalized review of results, not days later—right there</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icon">&#10003;</div>
+            <div>
+              <strong>Proven Strategies</strong>
+              <p>Learn test-taking tactics that work across question types</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icon">&#10003;</div>
+            <div>
+              <strong>Targeted Practice</strong>
+              <p>Deep dive on the specific areas where your student needs the most help</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icon">&#10003;</div>
+            <div>
+              <strong>Adaptive Focus</strong>
+              <p>Math, Reading, Writing—we'll adjust based on individual needs</p>
+            </div>
           </div>
         </div>
-        <div class="benefit">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <strong>Immediate Feedback</strong>
-            <p>Get personalized review of results, not days later—right there</p>
-          </div>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <strong>Proven Strategies</strong>
-            <p>Learn test-taking tactics that work across question types</p>
-          </div>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <strong>Targeted Practice</strong>
-            <p>Deep dive on the specific areas where your student needs the most help</p>
-          </div>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon">&#10003;</div>
-          <div>
-            <strong>Adaptive Focus</strong>
-            <p>Math, Reading, Writing—we'll adjust based on individual needs</p>
-          </div>
-        </div>
+        <img src="images/testimonial-brianschoolfield.png" alt="Testimonial from Brian Schoolfield" class="benefits-testimonial">
       </div>
     </div>
   </section>
@@ -500,7 +522,6 @@
         <img src="images/testimonial-morgenyeakley.png" alt="Testimonial from Morgen Yeakley">
         <img src="images/testimonial-billbarber.png" alt="Testimonial from Bill Barber">
         <img src="images/testimonial-crystalsmithcatinella.png" alt="Testimonial from Crystal Smith-Catinella">
-        <img src="images/testimonial-brianschoolfield.png" alt="Testimonial from Brian Schoolfield">
         <img src="images/testimonial-mattmerrittt.png" alt="Testimonial from Matt Merritt">
         <img src="images/testimonial-alisonschuetze.png" alt="Testimonial from Alison Schuetze">
       </div>
