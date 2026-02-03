@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAT Prep Weekend | Nathan Koerschner</title>
+  <meta name="description" content="Free weekend SAT prep seminar in Asheville, NC. Personalized strategies, full practice test, and immediate feedback. Limited to 3 students.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --green: #2d5a3d;
+      --green-light: #4a7c59;
+      --green-pale: #e8f0eb;
+      --green-dark: #1e3d2a;
+      --accent: #7cb083;
+      --text: #2c3e2f;
+      --text-light: #5a6b5c;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+      color: white;
+      padding: 80px 20px 100px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .tagline {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      opacity: 0.9;
+      margin: 0 0 40px;
+      font-weight: 300;
+    }
+
+    .hero-details {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .detail {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .detail-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.7;
+    }
+
+    .detail-value {
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    .spots {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin: 0 0 35px;
+    }
+
+    .cta {
+      display: inline-block;
+      background: white;
+      color: var(--green);
+      border: none;
+      padding: 16px 42px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .cta-large {
+      padding: 18px 52px;
+      font-size: 1.2rem;
+    }
+
+    /* Sections */
+    section {
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      color: var(--green);
+      margin: 0 0 20px;
+      font-weight: 600;
+    }
+
+    section > .container > p:first-of-type {
+      color: var(--text-light);
+      font-size: 1.1rem;
+      margin-bottom: 35px;
+    }
+
+    .alt {
+      background: var(--green-pale);
+    }
+
+    /* Benefits */
+    .benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .benefit {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .benefit-icon {
+      width: 30px;
+      height: 30px;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .benefit strong {
+      color: var(--text);
+      font-size: 1.05rem;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .benefit p {
+      margin: 0;
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    /* Schedule */
+    .schedule {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+
+    @media (min-width: 600px) {
+      .schedule {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+      }
+    }
+
+    .day h3 {
+      font-size: 1.15rem;
+      color: var(--green);
+      margin: 0 0 18px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .schedule-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .schedule-item {
+      display: flex;
+      gap: 14px;
+      font-size: 0.95rem;
+    }
+
+    .time {
+      color: var(--green);
+      font-weight: 600;
+      min-width: 80px;
+    }
+
+    .activity {
+      color: var(--text);
+    }
+
+    /* About */
+    .about {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+
+    @media (min-width: 600px) {
+      .about {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+
+    .photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--green-pale);
+      flex-shrink: 0;
+    }
+
+    .bio p {
+      margin: 0 0 16px;
+      color: var(--text);
+    }
+
+    .bio p:last-child {
+      margin-bottom: 0;
+    }
+
+    .bio strong {
+      color: var(--green);
+    }
+
+    /* Testimonials Masonry */
+    .testimonials {
+      column-count: 1;
+      column-gap: 20px;
+    }
+
+    @media (min-width: 500px) {
+      .testimonials {
+        column-count: 2;
+      }
+    }
+
+    @media (min-width: 800px) {
+      .testimonials {
+        column-count: 3;
+      }
+    }
+
+    .testimonials img {
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      break-inside: avoid;
+    }
+
+    /* Final CTA Section */
+    .final {
+      text-align: center;
+    }
+
+    .final h2 {
+      margin-bottom: 30px;
+    }
+
+    .final-details {
+      max-width: 480px;
+      margin: 0 auto 35px;
+      text-align: left;
+      background: white;
+      padding: 28px 32px;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+    }
+
+    .final-details p {
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+
+    .final-details p:last-child {
+      margin-bottom: 0;
+    }
+
+    .final-details strong {
+      color: var(--green);
+    }
+
+    /* Footer link */
+    .footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--green-dark);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>SAT Prep Weekend</h1>
+      <p class="tagline">A free, intensive weekend to boost your SAT score</p>
+      <div class="hero-details">
+        <div class="detail">
+          <span class="detail-label">When</span>
+          <span class="detail-value">Feb 21-22, 2025</span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Where</span>
+          <span class="detail-value">Arden, NC</span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Cost</span>
+          <span class="detail-value">Free</span>
+        </div>
+      </div>
+      <p class="spots">Limited to 3 students</p>
+      <button class="cta" data-tf-popup="YOUR_TYPEFORM_ID" data-tf-opacity="100" data-tf-size="100">Register Now</button>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>What Your Student Will Get</h2>
+      <p>This isn't a lecture series. It's two days of hands-on, personalized SAT preparation designed to meet each student where they are.</p>
+      <div class="benefits">
+        <div class="benefit">
+          <div class="benefit-icon">&#10003;</div>
+          <div>
+            <strong>Full Practice SAT</strong>
+            <p>Take a complete, timed practice test under realistic conditions</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">&#10003;</div>
+          <div>
+            <strong>Immediate Feedback</strong>
+            <p>Get personalized review of results, not days later—right there</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">&#10003;</div>
+          <div>
+            <strong>Proven Strategies</strong>
+            <p>Learn test-taking tactics that work across question types</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">&#10003;</div>
+          <div>
+            <strong>Targeted Practice</strong>
+            <p>Deep dive on the specific areas where your student needs the most help</p>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">&#10003;</div>
+          <div>
+            <strong>Adaptive Focus</strong>
+            <p>Math, Reading, Writing—we'll adjust based on individual needs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <h2>The Weekend Schedule</h2>
+      <p>Two focused days, 10am–3pm each. All materials provided—students just need to show up ready to work.</p>
+      <div class="schedule">
+        <div class="day">
+          <h3>Saturday, February 21</h3>
+          <div class="schedule-items">
+            <div class="schedule-item">
+              <span class="time">10:00am</span>
+              <span class="activity">Welcome & Strategy Overview</span>
+            </div>
+            <div class="schedule-item">
+              <span class="time">10:30am</span>
+              <span class="activity">Test-taking tactics and approaches</span>
+            </div>
+            <div class="schedule-item">
+              <span class="time">11:30am</span>
+              <span class="activity">Practice section + group review</span>
+            </div>
+            <div class="schedule-item">
+              <span class="time">12:30pm</span>
+              <span class="activity">Break</span>
+            </div>
+            <div class="schedule-item">
+              <span class="time">1:00pm</span>
+              <span class="activity">Full practice test (timed sections)</span>
+            </div>
+            <div class="schedule-item">
+              <span class="time">3:00pm</span>
+              <span class="activity">End of Day 1</span>
+            </div>
+          </div>
+        </div>
+        <div class="day">
+          <h3>Sunday, February 22</h3>
+          <div class="schedule-items">
+            <div class="schedule-item">
+              <span class="time">10:00am</span>
+              <span class="activity">Practice test results review</span>
+            </div>
+            <div class="schedule-item">
+              <span class="time">11:00am</span>
+              <span class="activity">Deep dive: commonly missed question types</span>
+            </div>
+            <div class="schedule-item">
+              <span class="time">12:00pm</span>
+              <span class="activity">Break</span>
+            </div>
+            <div class="schedule-item">
+              <span class="time">12:30pm</span>
+              <span class="activity">Targeted practice on weak areas</span>
+            </div>
+            <div class="schedule-item">
+              <span class="time">2:00pm</span>
+              <span class="activity">Strategy reinforcement & next steps</span>
+            </div>
+            <div class="schedule-item">
+              <span class="time">3:00pm</span>
+              <span class="activity">Wrap up</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>About Your Instructor</h2>
+      <div class="about">
+        <img src="images/profile-photo.jpg" alt="Nathan Koerschner" class="photo">
+        <div class="bio">
+          <p>I'm Nathan Koerschner. From 2019 to 2022, I owned and operated <strong>MosaicMath</strong>, a remote STEM tutoring company that served dozens of students over hundreds of hours—covering everything from algebra fundamentals to test prep.</p>
+          <p>For the past five years, I've worked as a Data Engineer in the tech industry. I've seen firsthand how AI tools are changing what's possible in personalized learning, and I'm excited to bring that to SAT prep.</p>
+          <p>This seminar combines what I've learned from years of one-on-one teaching with modern tools that help identify exactly where each student can improve—and how to get there efficiently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <h2>What Past Students Say</h2>
+      <div class="testimonials">
+        <img src="images/testimonial-alisonschuetze.png" alt="Testimonial from Alison Schuetze">
+        <img src="images/testimonial-billbarber.png" alt="Testimonial from Bill Barber">
+        <img src="images/testimonial-brianschoolfield.png" alt="Testimonial from Brian Schoolfield">
+        <img src="images/testimonial-crystalsmithcatinella.png" alt="Testimonial from Crystal Smith-Catinella">
+        <img src="images/testimonial-mattmerrittt.png" alt="Testimonial from Matt Merritt">
+        <img src="images/testimonial-morgenyeakley.png" alt="Testimonial from Morgen Yeakley">
+      </div>
+    </div>
+  </section>
+
+  <section class="alt final">
+    <div class="container">
+      <h2>Ready to Register?</h2>
+      <div class="final-details">
+        <p><strong>When:</strong> Saturday & Sunday, February 21-22, 2025 · 10am–3pm</p>
+        <p><strong>Where:</strong> ImageSmith Communications · 19 Walden Dr, Arden, NC 28704</p>
+        <p><strong>Cost:</strong> Free</p>
+        <p><strong>What to bring:</strong> Just yourself—all materials provided</p>
+      </div>
+      <button class="cta cta-large" data-tf-popup="YOUR_TYPEFORM_ID" data-tf-opacity="100" data-tf-size="100">Register Now</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <a href="https://nathankoerschner.com">nathankoerschner.com</a>
+  </footer>
+
+  <script src="//embed.typeform.com/next/embed.js"></script>
+</body>
+</html>
